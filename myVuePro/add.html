@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>add</title>
+</head>
+<body>
+	
+</body>
+<script>
+	let loca = window.localStorage;
+	let labfirst1 = ["产品策划","产品运营","游戏策划","游戏运营","新媒体营销","网络营销理论","SEO","SEM"];//互联网策划
+	let labfirst2 = ["淘宝营销","跨境电商","微信营销","京东营销","拼多多","其他"];//互联网营销
+	let labfirst3 = ["C","C++","java","PHP","c#/.Net","Python","Ruby","Javascript","Perl","SQL","Object_C","Lua","Flash AS3.0","Swift","VB.NET","其他"];//编程语言
+	let labfirst4 = ["前端开发","腾讯自研前端课"];//前端开发
+	let labfirst5 = ["Android","IOS开发","微信开发","跨平台APP开发","其他"];//移动开发
+	let labfirst6 = ["Linux开发","Python自动化运维","DevOps","信息安全","其他"];//网络与运维
+	let labfirst7 = ["敏键开发","软件测试","软件研发","其他"];//软件研发
+	let labsecond1 = ["电商美工","综合平面","摄影后期"];//平面设计
+	let labsecond2 = ["交互设计","游戏UI设计","Web UI设计","APP UI设计","腾讯设计学院","其他"];//UI设计
+	let labsecond3 = ["游戏角色","游戏UI设计","Web UI设计","APP UI设计","腾讯设计学院","其他"];//游戏动画设计
+	let labsecond4 = ["插画漫画","国画油画","水彩水粉画","素描","手绘其他"];//绘画创作
+	let labthird1 = ["英语口语","学术英语","新概念英语","青少年英语","词汇语法","职场英语"];//实用英语
+	let labthird2 = ["雅思","托福","K12留学","研究生留学","留学指导"];//出国留学
+	let labthird3 = ["英语四级","英语六级"];//英语四六级
+	let labthird4 = ["日语零基础","日语初级","日语中高级","兴趣日语","日语考试","日本留学"];//日语
+	let labthird5 = ["韩语零基础","韩语初级","韩语中高级","旅游韩语","韩流文化","TOPIK考试／留学"];//韩语
+	let labthird6 = ["法语","德语","西班牙语","葡萄牙语","方言","其他"];//小语种
+//需要存一个字段，然后对应很多对象，对象里面有名字和数组
+	let all = new Array();
+	all.push(new Lable("first",new Data("互联网策划",labfirst1)));
+	all.push(new Lable("first",new Data("互联网营销",labfirst2)));
+	all.push(new Lable("first",new Data("编程语言",labfirst3)));
+	all.push(new Lable("first",new Data("前端开发",labfirst4)));
+	all.push(new Lable("first",new Data("移动开发",labfirst5)));
+	all.push(new Lable("first",new Data("网络与运维",labfirst6)));
+	all.push(new Lable("first",new Data("软件研发",labfirst7)));
+	all.push(new Lable("second",new Data("平面设计",labsecond1)));
+	all.push(new Lable("second",new Data("UI设计",labsecond2)));
+	all.push(new Lable("second",new Data("游戏动画设计",labsecond3)));
+	all.push(new Lable("second",new Data("绘画创作",labsecond4)));
+	all.push(new Lable("third",new Data("实用英语",labthird1)));
+	all.push(new Lable("third",new Data("出国留学",labthird2)));
+	all.push(new Lable("third",new Data("英语四六级",labthird3)));
+	all.push(new Lable("third",new Data("日语",labthird4)));
+	all.push(new Lable("third",new Data("韩语",labthird5)));
+	all.push(new Lable("third",new Data("小语种",labthird6)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	function Lable(type,data) {
+		// body...
+		this.type = type;
+		this.data = data;
+	}
+	function Data(name,value) {
+		// body...
+		this.name = name;
+		this.value = value;
+	}
+	let strAll = JSON.stringify(all); 
+	loca.setItem("claPagecontent",strAll);
+</script>
+</html>
